@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension 
+         point="org.eclipse.ui.commands">
+         
+      <category 
+            name="Rampi Commerce" 
+            id="com.i2btech.remote-atg.plugin.commands.category">
+      </category>
+	 
+	 <command 
+            name="Settings" 
+            categoryId="com.i2btech.remote-atg.plugin.commands.settings"
+            id="com.i2btech.remote-atg.plugin.commands.settings">            
+      </command>
+      
+      <command 
+            name="Start ACC" 
+            categoryId="com.i2btech.remote-atg.plugin.commands.acc"
+            id="com.i2btech.remote-atg.plugin.commands.acc">            
+      </command>
+	 
+	 <command 
+            name="Assemble PROD" 
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.ass_prod_module">
+            <commandParameter id="instanceId" name="1001"/>
+      </command>
+      
+      <command
+            name="Assemble PUB" 
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.ass_pub_module">
+            <commandParameter id="instanceId" name="1002"/>
+      </command>
+      
+      <command 
+            name="Set Templates" 
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.set_templates">
+            <commandParameter id="action" name="set_templates"/>            
+      </command>
+      
+      <command 
+            name="Promote Content" 
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.promote_content">
+            <commandParameter id="action" name="promote_content"/>            
+      </command>                  
+	 
+	  <command 
+            name="Generate rebel.xml"  
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.rebel">                       
+      </command>
+      
+      <command 
+            name="Disable WLS JRebel agent"  
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.disable_rebel">    
+            <commandParameter id="manage" name="disable"/>
+      </command>      
+	 
+      <command
+            name="Activate JRebel"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.jrebelact">
+      </command>
+      
+      <command
+            name="Enable WLS JRebel agent"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.jrebelconf">
+            <commandParameter id="manage" name="enable"/>
+      </command>
+      
+      <!-- Start/Stop Endeca -->
+      <command
+            name="Start"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.endeca_start">
+            <commandParameter id="manage" name="start"/>            
+      </command>      
+      <command
+            name="Stop"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.endeca_stop">
+            <commandParameter id="manage" name="stop"/>
+      </command>
+      <!-- End Start/Stop Endeca -->
+      
+      <!-- Start/Stop WLS -->
+      <command
+            name="Start"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.wls_start">
+            <commandParameter id="manage" name="start"/>            
+      </command>      
+      <command
+            name="Stop"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.wls_stop">
+            <commandParameter id="manage" name="stop"/>
+      </command>
+      <!-- End Start/Stop WLS -->
+      
+      <!-- Start/Stop ATG Prod -->
+      <command
+            name="Start"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.atgprod_start">
+            <commandParameter id="manage" name="start"/>
+            <commandParameter id="instanceId" name="1001"/>
+      </command>      
+      <command
+            name="Stop"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.atgprod_stop">
+            <commandParameter id="manage" name="stop"/>
+            <commandParameter id="instanceId" name="1001"/> 
+      </command>
+      <!-- End Start/Stop ATG Prod -->
+      
+      <!-- Start/Stop ATG Pub -->
+      <command
+            name="Start"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.atgpub_start">
+            <commandParameter id="manage" name="start"/>
+            <commandParameter id="instanceId" name="1002"/>
+      </command>
+      <command
+            name="Stop"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.atgpub_stop">
+            <commandParameter id="manage" name="stop"/>
+            <commandParameter id="instanceId" name="1002"/>
+      </command>
+      <!-- End Start/Stop ATG Pub -->
+      
+      <!-- Start/Stop ATG SSO -->
+      <command
+            name="Start"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.atgsso_start">
+            <commandParameter id="manage" name="start"/>
+            <commandParameter id="instanceId" name="1003"/>
+      </command>      
+      <command
+            name="Stop"
+            categoryId="com.i2btech.remote-atg.plugin.commands.category"
+            id="com.i2btech.remote-atg.plugin.commands.atgsso_stop">
+            <commandParameter id="manage" name="stop"/>
+            <commandParameter id="instanceId" name="1003"/>
+      </command>
+      <!-- End Start/Stop ATG SSO -->
+            
+   </extension>
+   
+   <extension point="org.eclipse.ui.handlers">
+   
+   	  <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.acc"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageACCHandler">
+      </handler>
+   
+   	  <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.settings"
+            class="com.i2btech.remoteatg.plugin.handlers.SettingsHandler">
+      </handler>
+   
+   	  <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.ass_prod_module"
+            class="com.i2btech.remoteatg.plugin.handlers.AssembleModuleHandler">
+      </handler>
+      
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.set_templates"
+            class="com.i2btech.remoteatg.plugin.handlers.EndecaControlHandler">
+      </handler>
+      
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.promote_content"
+            class="com.i2btech.remoteatg.plugin.handlers.EndecaControlHandler">
+      </handler>      
+   
+   	  <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.ass_pub_module"
+            class="com.i2btech.remoteatg.plugin.handlers.AssembleModuleHandler">
+      </handler>
+      
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.rebel"
+            class="com.i2btech.remoteatg.plugin.handlers.FileGenHandler">
+      </handler>
+   
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.jrebelact"
+            class="com.i2btech.remoteatg.plugin.handlers.JRebelActivationHandler">
+      </handler>
+      
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.jrebelconf"
+            class="com.i2btech.remoteatg.plugin.handlers.JRebelWLSConfigurationHandler">
+      </handler>
+      
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.disable_rebel"
+            class="com.i2btech.remoteatg.plugin.handlers.JRebelWLSConfigurationHandler">
+      </handler>          
+                  
+	  <!-- Start/Stop Endeca -->      
+      <handler 
+            commandId="com.i2btech.remote-atg.plugin.commands.endeca_start"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageEndecaHandler">
+      </handler>
+            
+      <handler 
+            commandId="com.i2btech.remote-atg.plugin.commands.endeca_stop"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageEndecaHandler">
+      </handler>
+      <!-- End Start/Stop Endeca -->	  
+	  	
+	  <!-- Start/Stop WLS -->      
+      <handler 
+            commandId="com.i2btech.remote-atg.plugin.commands.wls_start"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageWLSHandler">
+      </handler>
+      
+      <handler 
+            commandId="com.i2btech.remote-atg.plugin.commands.wls_stop"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageWLSHandler">
+      </handler>
+      <!-- End Start/Stop WLS -->
+      
+      <!-- Start/Stop ATG Prod -->
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.atgprod_start"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageATGHandler">
+      </handler>
+      
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.atgprod_stop"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageATGHandler">
+      </handler>
+      <!-- End Start/Stop ATG Prod -->            
+      
+      <!-- Start/Stop ATG Pub -->
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.atgpub_start"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageATGHandler">
+      </handler>
+      
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.atgpub_stop"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageATGHandler">
+      </handler>
+      <!-- End Start/Stop ATG Pub -->
+      
+      <!-- Start/Stop ATG SSO -->
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.atgsso_start"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageATGHandler">
+      </handler>
+      
+      <handler
+            commandId="com.i2btech.remote-atg.plugin.commands.atgsso_stop"
+            class="com.i2btech.remoteatg.plugin.handlers.ManageATGHandler">
+      </handler>
+      <!-- End Start/Stop ATG SSO -->
+      
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.bindings">
+        
+	  <key
+            commandId="com.i2btech.remote-atg.plugin.commands.disable_rebel"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>		
+      
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.settings"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.acc"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+		
+	   <key
+            commandId="com.i2btech.remote-atg.plugin.commands.rebel"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>				
+				        
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.ass_prod_module"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.set_templates"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.promote_content"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>      
+      
+      <key 
+            commandId="com.i2btech.remote-atg.plugin.commands.ass_pub_module"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+               
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.jrebelact"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.jrebelconf"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>      
+      
+	  <!-- Start/Stop Endeca -->
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.endeca_start"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.endeca_stop"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <!-- End Start/Stop Endeca -->	  
+	        
+      <!-- Start/Stop WLS -->
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.wls_start"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.wls_stop"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <!-- End Start/Stop WLS -->
+      
+      <!-- Start/Stop ATG Prod -->
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.atgprod_start"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>      
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.atgprod_stop"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>      
+      <!-- End Start/Stop ATG Prod -->
+      
+      <!-- Start/Stop ATG Pub -->
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.atgpub_start"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.atgpub_stop"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <!-- End Start/Stop ATG Pub -->
+      
+      <!-- Start/Stop ATG SSO -->
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.atgsso_start"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="com.i2btech.remote-atg.plugin.commands.atgsso_stop"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <!-- End Start/Stop ATG SSO -->      
+      
+   </extension>
+   
+   <extension 
+         point="org.eclipse.ui.menus">
+      
+      <menuContribution locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+      	  
+      	  <menu
+               label="Rampi Commerce"
+               mnemonic="M"
+               id="com.i2btech.remote-atg.plugin.menus.sampleMenu2">
+               
+               	<command commandId="com.i2btech.remote-atg.plugin.commands.ass_prod_module"
+	        		label="Assemble PROD" style="push">
+	      		</command>
+	      		
+	      		<command commandId="com.i2btech.remote-atg.plugin.commands.ass_pub_module"
+	        		label="Assemble PUB" style="push">
+	      		</command>
+	      		
+	      		<command commandId="com.i2btech.remote-atg.plugin.commands.set_templates"
+	        		label="Set Templates" style="push">
+	      		</command>
+	      		
+	      		<command commandId="com.i2btech.remote-atg.plugin.commands.promote_content" 
+	        		label="Promote Content" style="push">
+	      		</command>
+	      		
+	      		<command commandId="com.i2btech.remote-atg.plugin.commands.rebel" 
+	        		label="Generate rebel.xml" style="push">
+	      		</command>
+	      			
+          </menu>
+	      
+      </menuContribution>
+      
+      <menuContribution locationURI="popup:org.eclipse.ui.navigator.ProjectExplorer#PopupMenu">
+      	  
+      	  <menu
+               label="Rampi Commerce"
+               mnemonic="M"
+               id="com.i2btech.remote-atg.plugin.menus.sampleMenu3">
+               
+               	<command commandId="com.i2btech.remote-atg.plugin.commands.ass_prod_module"
+	        		label="Assemble PROD" style="push">
+	      		</command>
+	      		
+	      		<command commandId="com.i2btech.remote-atg.plugin.commands.ass_pub_module"
+	        		label="Assemble PUB" style="push">
+	      		</command>
+	      		
+	      		<command commandId="com.i2btech.remote-atg.plugin.commands.set_templates"
+	        		label="Set Templates" style="push">
+	      		</command>
+	      		
+	      		<command commandId="com.i2btech.remote-atg.plugin.commands.promote_content" 
+	        		label="Promote Content" style="push">
+	      		</command>
+	      		
+	      		<command commandId="com.i2btech.remote-atg.plugin.commands.rebel" 
+	        		label="Generate rebel.xml" style="push">
+	      		</command>
+	      		
+          </menu>
+	      
+      </menuContribution>
+      
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+            
+         <menu
+               label="Rampi Commerce"
+               mnemonic="M"
+               id="com.i2btech.remote-atg.plugin.menus.sampleMenu">
+            
+            <command
+                  commandId="com.i2btech.remote-atg.plugin.commands.jrebelact"
+                  mnemonic="S"
+                  id="com.i2btech.remote-atg.plugin.menus.jrebelact">
+            </command>
+            
+            <command
+                  commandId="com.i2btech.remote-atg.plugin.commands.jrebelconf"
+                  mnemonic="S"
+                  id="com.i2btech.remote-atg.plugin.menus.jrebelconf">
+            </command>
+                        
+            <command
+                  commandId="com.i2btech.remote-atg.plugin.commands.disable_rebel"
+                  mnemonic="S"
+                  id="com.i2btech.remote-atg.plugin.menus.jrebelconf">
+            </command>
+            
+            <command
+                  commandId="com.i2btech.remote-atg.plugin.commands.acc"
+                  mnemonic="S"
+                  id="com.i2btech.remote-atg.plugin.menus.acc">
+            </command>
+            
+                       
+			<separator name="separator2" visible="true"></separator>
+			
+			<menu
+               label="Manage WebLogic"
+               mnemonic="M"
+               id="com.i2btech.remote-atg.plugin.menus.manage_wls">			            
+	            <command
+	                  commandId="com.i2btech.remote-atg.plugin.commands.wls_start"
+	                  mnemonic="S"
+	                  id="com.i2btech.remote-atg.plugin.menus.wls_start">
+	            </command>	            
+	            <command
+	                  commandId="com.i2btech.remote-atg.plugin.commands.wls_stop"
+	                  mnemonic="S"
+	                  id="com.i2btech.remote-atg.plugin.menus.wls_stop">
+	            </command>            
+            </menu>
+            
+            <menu
+               label="Manage Endeca"
+               mnemonic="M"
+               id="com.i2btech.remote-atg.plugin.menus.manage_endeca">			            
+	            <command
+	                  commandId="com.i2btech.remote-atg.plugin.commands.endeca_start"
+	                  mnemonic="S"
+	                  id="com.i2btech.remote-atg.plugin.menus.endeca_start">
+	            </command>	            
+	            <command
+	                  commandId="com.i2btech.remote-atg.plugin.commands.endeca_stop"
+	                  mnemonic="S"
+	                  id="com.i2btech.remote-atg.plugin.menus.endeca_stop">
+	            </command>            
+            </menu>
+            
+            <menu 
+               label="Manage ATG Prod"
+               mnemonic="M"
+               id="com.i2btech.remote-atg.plugin.menus.manage_atg_prod">
+               <command
+                  commandId="com.i2btech.remote-atg.plugin.commands.atgprod_start"
+                  mnemonic="S"
+                  id="com.i2btech.remote-atg.plugin.menus.atgprod_start">
+               </command>
+               <command
+                  commandId="com.i2btech.remote-atg.plugin.commands.atgprod_stop"
+                  mnemonic="S"
+                  id="com.i2btech.remote-atg.plugin.menus.atgprod_stop">
+               </command>
+            </menu>
+            
+            <menu 
+               label="Manage ATG Pub"
+               mnemonic="M"
+               id="com.i2btech.remote-atg.plugin.menus.manage_atg_pub">
+	            <command
+	                  commandId="com.i2btech.remote-atg.plugin.commands.atgpub_start"
+	                  mnemonic="S"
+	                  id="com.i2btech.remote-atg.plugin.menus.atgpub_start">
+	            </command>
+	            <command
+	                  commandId="com.i2btech.remote-atg.plugin.commands.atgpub_stop"
+	                  mnemonic="S"
+	                  id="com.i2btech.remote-atg.plugin.menus.atgpub_stop">
+	            </command>	            
+            </menu>
+            
+            <menu 
+               label="Manage ATG SSO"
+               mnemonic="M"
+               id="com.i2btech.remote-atg.plugin.menus.manage_atg_sso">
+	            <command
+	                  commandId="com.i2btech.remote-atg.plugin.commands.atgsso_start"
+	                  mnemonic="S"
+	                  id="com.i2btech.remote-atg.plugin.menus.atgsso_start">
+	            </command>
+	            <command
+	                  commandId="com.i2btech.remote-atg.plugin.commands.atgsso_stop"
+	                  mnemonic="S"
+	                  id="com.i2btech.remote-atg.plugin.menus.atgsso_stop">
+	            </command>	            
+            </menu>
+            
+            <separator name="separator3" visible="true"></separator>
+            
+            <command
+              commandId="com.i2btech.remote-atg.plugin.commands.settings"
+              mnemonic="S"
+              id="com.i2btech.remote-atg.plugin.menus.settings">
+	        </command>	
+            
+         </menu>
+      </menuContribution>
+            
+   </extension>
+
+</plugin>
